@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Интерактивная сказка о добром чёрном котёнке, который просто хотел найти друзей. Трогательная история для детей и взрослых.">
+    <title>Чёрный Котёнок - Интерактивная Сказка</title>
+    <meta property="og:title" content="Чёрный Котёнок, который никого не пугал">
+    <meta property="og:description" content="Добрая сказка о дружбе и принятии">
+    <meta property="og:type" content="website">
+    <style>
+      :root {
+        --primary: 250 70% 55%;
+        --primary-hover: 250 70% 45%;
+        --primary-light: 250 70% 95%;
+        --success: 160 84% 39%;
+        --danger: 0 84% 60%;
+        --warning: 38 92% 50%;
+        --background: 240 30% 12%;
+        --surface: 240 25% 18%;
+        --foreground: 45 30% 96%;
+        --muted: 240 10% 60%;
+        --border: 240 20% 25%;
+        --accent-purple: 280 70% 60%;
+        --accent-blue: 210 80% 60%;
+        --accent-gold: 45 90% 65%;
+        --kitten-eyes: 210 40% 65%;
+        --radius: 1rem;
+      }
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        background: linear-gradient(135deg, hsl(240 30% 10%) 0%, hsl(260 25% 15%) 50%, hsl(240 30% 12%) 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
+        color: hsl(var(--foreground));
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(255, 220, 100, 0.4)); }
+        50% { filter: drop-shadow(0 0 20px rgba(255, 220, 100, 0.8)); }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: { DEFAULT: 'hsl(var(--primary))', hover: 'hsl(var(--primary-hover))', light: 'hsl(var(--primary-light))' },
+              success: 'hsl(var(--success))',
+              danger: 'hsl(var(--danger))',
+              warning: 'hsl(var(--warning))',
+              background: 'hsl(var(--background))',
+              surface: 'hsl(var(--surface))',
+              foreground: 'hsl(var(--foreground))',
+              muted: 'hsl(var(--muted))',
+              border: 'hsl(var(--border))',
+              'accent-purple': 'hsl(var(--accent-purple))',
+              'accent-blue': 'hsl(var(--accent-blue))',
+              'accent-gold': 'hsl(var(--accent-gold))',
+              'kitten-eyes': 'hsl(var(--kitten-eyes))'
+            },
+            borderRadius: { DEFAULT: 'var(--radius)' },
+            fontFamily: {
+              story: ['Georgia', 'Cambria', 'Times New Roman', 'serif']
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
